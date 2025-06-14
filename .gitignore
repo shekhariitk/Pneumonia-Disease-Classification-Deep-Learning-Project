@@ -1,4 +1,5 @@
 venvcnn/
 
-# ignore the data directory and its contents
-data/
+
+# completely ignore the  data directory
+datasets/
