@@ -1,0 +1,10 @@
+[2025-06-14 22:24:30,048] 9 root - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-14 22:24:30,049] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-14 22:24:30,056] 52 root - INFO - created directory at: artifacts
+[2025-06-14 22:24:30,056] 52 root - INFO - created directory at: artifacts/data_ingestion
+[2025-06-14 22:24:30,057] 24 root - INFO - Downloading data from https://drive.google.com/file/d/1nmR9kchQlUZk0PQMx_NnRMCBgggfWBeZ/view?usp=sharing into file artifacts/data_ingestion/data.zip
+[2025-06-14 22:29:36,145] 30 root - INFO - Downloaded data from https://drive.google.com/file/d/1nmR9kchQlUZk0PQMx_NnRMCBgggfWBeZ/view?usp=sharing into file artifacts/data_ingestion/data.zip
+[2025-06-14 22:29:45,376] 47 root - INFO - Extracted zip file into artifacts/data_ingestion
+[2025-06-14 22:29:45,377] 12 root - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x

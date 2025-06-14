@@ -22,6 +22,7 @@ Requires-Dist: scipy
 Requires-Dist: Flask
 Requires-Dist: Flask-Cors
 Requires-Dist: ipykernel
+Requires-Dist: gdown
 Dynamic: author
 Dynamic: author-email
 Dynamic: license-file

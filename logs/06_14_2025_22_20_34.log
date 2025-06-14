@@ -1,0 +1,19 @@
+[2025-06-14 22:20:35,683] 9 root - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-14 22:20:35,707] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-14 22:20:35,712] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-14 22:20:35,712] 14 root - ERROR - First argument must be mapping or iterable
+Traceback (most recent call last):
+  File "E:\DL projects\Pneumonia-classification-projects\main.py", line 11, in <module>
+    data_ingestion.main()
+  File "E:\DL projects\Pneumonia-classification-projects\src\pipeline\stage_01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "E:\DL projects\Pneumonia-classification-projects\src\config\configuration.py", line 14, in __init__
+    self.params = read_yaml(params_filepath)
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\ensure\main.py", line 849, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "E:\DL projects\Pneumonia-classification-projects\src\utils\common.py", line 37, in read_yaml
+    raise e
+  File "E:\DL projects\Pneumonia-classification-projects\src\utils\common.py", line 33, in read_yaml
+    return ConfigBox(content)
+  File "box\box.py", line 259, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable

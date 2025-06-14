@@ -3,3 +3,6 @@ venvcnn/
 
 # completely ignore the  data directory
 datasets/
+
+# ignore the artifact directory
+artifacts/
