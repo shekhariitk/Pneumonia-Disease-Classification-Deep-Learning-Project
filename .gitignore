@@ -1,1 +1,4 @@
 venvcnn/
+
+# ignore the data directory
+data/
