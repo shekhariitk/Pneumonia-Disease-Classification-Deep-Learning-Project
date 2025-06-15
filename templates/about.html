@@ -12,7 +12,7 @@
             <div class="card-body">
                 <h4>How It Works</h4>
                 <p>
-                    Our pneumonia detection system uses a deep learning model trained on thousands of chest X-ray images
+                    Our pneumonia detection system uses a deep learning model trained on five thousands of chest X-ray images
                     to identify signs of pneumonia. The model analyzes patterns in the X-ray images that are characteristic
                     of pneumonia infection.
                 </p>
@@ -27,14 +27,29 @@
                 
                 <h4>Model Performance</h4>
                 <div class="progress mb-3">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">93% Accuracy</div>
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90% Accuracy</div>
                 </div>
-                
+            <div class = "alert alert-warning">
                 <h4>What is Pneumonia?</h4>
                 <p>
                     Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with
                     fluid or pus, causing cough with phlegm or pus, fever, chills, and difficulty breathing.
                 </p>
+                <p>
+                    It can be caused by a variety of organisms, including bacteria, viruses, and fungi. Symptoms can range
+                    from mild to severe and may require hospitalization.
+                                                </p>
+
+                </div>
+            <div class = "alert alert-warning">
+                <h4>Future Scope</h4>
+                <p>
+                    We aim to improve the model's accuracy by incorporating more diverse and huge datasets and advanced techniques
+                    such as transfer learning . Future updates will also include features like real-time analysis and integration
+                    with electronic health records.We can use GPUs to speed up the training process and improve the model's performance.
+                </p>
+                                    </div>
+
                 
                 <div class="d-grid gap-2 mt-4">
                     <a href="{{ url_for('home') }}" class="btn btn-primary">

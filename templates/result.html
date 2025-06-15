@@ -11,7 +11,11 @@
             </div>
             <div class="card-body">
                 <div class="text-center mb-4">
-                    <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded X-ray" class="img-fluid rounded" style="max-height: 300px;">
+                    <!-- Display image directly from memory -->
+                    <img src="data:image/jpeg;base64,{{ img_data }}" 
+                         alt="Uploaded X-ray" 
+                         class="img-fluid rounded" 
+                         style="max-height: 300px;">
                 </div>
                 
                 <div class="alert {{ 'alert-danger' if result == 'Pneumonia Detected' else 'alert-success' }} text-center">
