@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h3 class="text-center"><i class="fas fa-lungs me-2"></i>Pneumonia Detection</h3>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-4">
+                    <img src="{{ url_for('static', filename='images/default-xray.jpg') }}" alt="Chest X-ray" class="img-fluid rounded" style="max-height: 300px;">
+                </div>
+                
+                <form id="uploadForm" action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="xrayFile" class="form-label">Upload Chest X-ray Image</label>
+                        <input class="form-control" type="file" id="xrayFile" name="file" accept="image/*" required>
+                        <div class="form-text">Supported formats: JPG, JPEG, PNG</div>
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-search me-2"></i>Analyze Image
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('uploadForm').addEventListener('submit', function(e) {
+    const fileInput = document.getElementById('xrayFile');
+    if (fileInput.files.length === 0) {
+        e.preventDefault();
+        alert('Please select an image file first');
+    }
+});
+</script>
+{% endblock %}

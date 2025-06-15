@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h3 class="text-center"><i class="fas fa-info-circle me-2"></i>About Pneumonia Detection</h3>
+            </div>
+            <div class="card-body">
+                <h4>How It Works</h4>
+                <p>
+                    Our pneumonia detection system uses a deep learning model trained on thousands of chest X-ray images
+                    to identify signs of pneumonia. The model analyzes patterns in the X-ray images that are characteristic
+                    of pneumonia infection.
+                </p>
+                
+                <div class="alert alert-warning">
+                    <h5><i class="fas fa-exclamation-triangle me-2"></i>Disclaimer</h5>
+                    <p>
+                        This system is designed to assist healthcare professionals and should not be used as a sole diagnostic tool.
+                        Always consult with a qualified medical professional for diagnosis and treatment.
+                    </p>
+                </div>
+                
+                <h4>Model Performance</h4>
+                <div class="progress mb-3">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 93%" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100">93% Accuracy</div>
+                </div>
+                
+                <h4>What is Pneumonia?</h4>
+                <p>
+                    Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with
+                    fluid or pus, causing cough with phlegm or pus, fever, chills, and difficulty breathing.
+                </p>
+                
+                <div class="d-grid gap-2 mt-4">
+                    <a href="{{ url_for('home') }}" class="btn btn-primary">
+                        <i class="fas fa-lungs me-2"></i>Try the Detector
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
