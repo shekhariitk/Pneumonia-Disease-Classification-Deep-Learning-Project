@@ -1,0 +1,44 @@
+[2025-06-15 18:06:52,207] 75 root - INFO - Loading callbacks for model training...
+[2025-06-15 18:06:52,207] 22 root - INFO - 
+****************************************
+[2025-06-15 18:06:52,207] 23 root - INFO - >>>>>> Stage Prepare base model started <<<<<<
+[2025-06-15 18:06:52,209] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 18:06:52,232] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 18:06:52,232] 52 root - INFO - created directory at: artifacts
+[2025-06-15 18:06:52,232] 52 root - INFO - created directory at: artifacts/prepare_base_model
+[2025-06-15 18:06:52,232] 14 root - INFO - Creating base model with input shape: (128, 128, 3)
+[2025-06-15 18:06:52,307] 35 root - INFO - Base model created successfully
+[2025-06-15 18:06:52,311] 36 root - INFO - Base model summary:
+None
+[2025-06-15 18:06:52,311] 359 tensorflow - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2025-06-15 18:06:52,324] 87 root - INFO - Model saved to artifacts\prepare_base_model\base_model.h5
+[2025-06-15 18:06:52,325] 41 root - INFO - Base model saved to artifacts\prepare_base_model\base_model.h5
+[2025-06-15 18:06:52,325] 47 root - INFO - Updating base model with additional layers
+[2025-06-15 18:06:52,351] 65 root - INFO - Full model created with custom layers
+[2025-06-15 18:06:52,354] 66 root - INFO - Full model summary:
+None
+[2025-06-15 18:06:52,385] 87 root - INFO - Model saved to artifacts\prepare_base_model\base_model_updated.h5
+[2025-06-15 18:06:52,385] 81 root - INFO - Updated base model saved to artifacts\prepare_base_model\base_model_updated.h5
+[2025-06-15 18:06:52,385] 26 root - INFO - >>>>>> Stage Prepare base model completed <<<<<<
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[2025-06-15 18:06:52,385] 33 root - INFO - *******************
+[2025-06-15 18:06:52,385] 34 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 18:06:52,387] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 18:06:52,389] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 18:06:52,389] 52 root - INFO - created directory at: artifacts
+[2025-06-15 18:06:52,389] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 18:06:52,389] 52 root - INFO - created directory at: Model
+[2025-06-15 18:06:52,491] 36 root - INFO - Creating validation and training data generators...
+[2025-06-15 18:06:52,516] 47 root - INFO - Creating training data generator with augmentation...
+[2025-06-15 18:06:52,668] 89 root - INFO - Starting model training...
+[2025-06-15 18:06:52,668] 92 root - INFO - Steps per epoch: 163, Validation steps: 19
+[2025-06-15 18:06:52,669] 95 root - INFO - Fitting the model...
+[2025-06-15 18:06:52,669] 17 root - INFO - Creating callbacks for model training...
+[2025-06-15 18:06:52,669] 21 root - INFO - Model directory created at: Model\train_model.h5
+[2025-06-15 18:06:52,669] 24 root - INFO - Creating EarlyStopping
+[2025-06-15 18:06:52,670] 34 root - INFO - Creating ReduceLROnPlateau
+[2025-06-15 18:06:52,670] 44 root - INFO - Creating ModelCheckpoint
+[2025-06-15 18:06:52,670] 55 root - INFO - Returning the list of callbacks.
+[2025-06-15 18:06:52,670] 56 root - INFO - Callbacks: [<keras.callbacks.EarlyStopping object at 0x000002210D6CA170>, <keras.callbacks.ReduceLROnPlateau object at 0x000002210E75C700>, <keras.callbacks.ModelCheckpoint object at 0x000002210E75C850>]
+[2025-06-15 18:06:52,671] 57 root - INFO - Callbacks creation completed.
+[2025-06-15 18:06:52,671] 60 root - INFO - Callbacks list: [<keras.callbacks.EarlyStopping object at 0x000002210D6CA170>, <keras.callbacks.ReduceLROnPlateau object at 0x000002210E75C700>, <keras.callbacks.ModelCheckpoint object at 0x000002210E75C850>]

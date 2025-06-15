@@ -1,0 +1,22 @@
+[2025-06-15 15:45:26,307] 23 root - INFO - 
+****************************************
+[2025-06-15 15:45:26,308] 24 root - INFO - >>>>>> Stage Prepare base model started <<<<<<
+[2025-06-15 15:45:26,309] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 15:45:26,311] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 15:45:26,311] 52 root - INFO - created directory at: artifacts
+[2025-06-15 15:45:26,311] 52 root - INFO - created directory at: artifacts/prepare_base_model
+[2025-06-15 15:45:26,311] 14 root - INFO - Creating base model with input shape: (224, 224, 3)
+[2025-06-15 15:45:26,436] 35 root - INFO - Base model created successfully
+[2025-06-15 15:45:26,446] 36 root - INFO - Base model summary:
+None
+[2025-06-15 15:45:26,453] 359 tensorflow - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2025-06-15 15:45:26,516] 87 root - INFO - Model saved to artifacts\prepare_base_model\base_model.h5
+[2025-06-15 15:45:26,516] 41 root - INFO - Base model saved to artifacts\prepare_base_model\base_model.h5
+[2025-06-15 15:45:26,517] 47 root - INFO - Updating base model with additional layers
+[2025-06-15 15:45:26,562] 65 root - INFO - Full model created with custom layers
+[2025-06-15 15:45:26,584] 66 root - INFO - Full model summary:
+None
+[2025-06-15 15:45:26,683] 87 root - INFO - Model saved to artifacts\prepare_base_model\base_model_updated.h5
+[2025-06-15 15:45:26,683] 81 root - INFO - Updated base model saved to artifacts\prepare_base_model\base_model_updated.h5
+[2025-06-15 15:45:26,684] 27 root - INFO - >>>>>> Stage Prepare base model completed <<<<<<
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

@@ -1,0 +1,21 @@
+[2025-06-15 17:21:29,271] 77 root - INFO - Loading callbacks for model training...
+[2025-06-15 17:21:29,272] 37 root - INFO - *******************
+[2025-06-15 17:21:29,272] 38 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 17:21:29,273] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 17:21:29,274] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 17:21:29,275] 52 root - INFO - created directory at: artifacts
+[2025-06-15 17:21:29,275] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 17:21:29,415] 37 root - INFO - Creating validation and training data generators...
+[2025-06-15 17:21:29,456] 49 root - INFO - Creating training data generator with augmentation...
+[2025-06-15 17:21:29,586] 91 root - INFO - Starting model training...
+[2025-06-15 17:21:29,586] 94 root - INFO - Steps per epoch: 130, Validation steps: 32
+[2025-06-15 17:21:29,587] 97 root - INFO - Fitting the model...
+[2025-06-15 17:21:29,587] 17 root - INFO - Creating callbacks for model training...
+[2025-06-15 17:21:29,587] 21 root - INFO - Model directory created at: artifacts\training\best_train_model.h5
+[2025-06-15 17:21:29,587] 24 root - INFO - Creating EarlyStopping
+[2025-06-15 17:21:29,587] 34 root - INFO - Creating ReduceLROnPlateau
+[2025-06-15 17:21:29,588] 44 root - INFO - Creating ModelCheckpoint
+[2025-06-15 17:21:29,588] 55 root - INFO - Returning the list of callbacks.
+[2025-06-15 17:21:29,588] 56 root - INFO - Callbacks: [<keras.callbacks.EarlyStopping object at 0x0000013D0A7AB490>, <keras.callbacks.ReduceLROnPlateau object at 0x0000013D0A883EE0>, <keras.callbacks.ModelCheckpoint object at 0x0000013D0A881240>]
+[2025-06-15 17:21:29,588] 57 root - INFO - Callbacks creation completed.
+[2025-06-15 17:21:29,588] 60 root - INFO - Callbacks list: [<keras.callbacks.EarlyStopping object at 0x0000013D0A7AB490>, <keras.callbacks.ReduceLROnPlateau object at 0x0000013D0A883EE0>, <keras.callbacks.ModelCheckpoint object at 0x0000013D0A881240>]

@@ -1,0 +1,21 @@
+[2025-06-15 17:30:01,080] 77 root - INFO - Loading callbacks for model training...
+[2025-06-15 17:30:01,080] 33 root - INFO - *******************
+[2025-06-15 17:30:01,080] 34 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 17:30:01,082] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 17:30:01,083] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 17:30:01,083] 52 root - INFO - created directory at: artifacts
+[2025-06-15 17:30:01,083] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 17:30:01,219] 37 root - INFO - Creating validation and training data generators...
+[2025-06-15 17:30:01,261] 49 root - INFO - Creating training data generator with augmentation...
+[2025-06-15 17:30:01,387] 91 root - INFO - Starting model training...
+[2025-06-15 17:30:01,388] 94 root - INFO - Steps per epoch: 130, Validation steps: 32
+[2025-06-15 17:30:01,388] 97 root - INFO - Fitting the model...
+[2025-06-15 17:30:01,388] 17 root - INFO - Creating callbacks for model training...
+[2025-06-15 17:30:01,388] 21 root - INFO - Model directory created at: artifacts\training\best_train_model.h5
+[2025-06-15 17:30:01,388] 24 root - INFO - Creating EarlyStopping
+[2025-06-15 17:30:01,388] 34 root - INFO - Creating ReduceLROnPlateau
+[2025-06-15 17:30:01,388] 44 root - INFO - Creating ModelCheckpoint
+[2025-06-15 17:30:01,388] 55 root - INFO - Returning the list of callbacks.
+[2025-06-15 17:30:01,389] 56 root - INFO - Callbacks: [<keras.callbacks.EarlyStopping object at 0x0000026FCC4CF760>, <keras.callbacks.ReduceLROnPlateau object at 0x0000026FCC4CFBE0>, <keras.callbacks.ModelCheckpoint object at 0x0000026FCC5D3B80>]
+[2025-06-15 17:30:01,389] 57 root - INFO - Callbacks creation completed.
+[2025-06-15 17:30:01,389] 60 root - INFO - Callbacks list: [<keras.callbacks.EarlyStopping object at 0x0000026FCC4CF760>, <keras.callbacks.ReduceLROnPlateau object at 0x0000026FCC4CFBE0>, <keras.callbacks.ModelCheckpoint object at 0x0000026FCC5D3B80>]

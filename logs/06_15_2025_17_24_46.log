@@ -1,0 +1,21 @@
+[2025-06-15 17:24:49,505] 77 root - INFO - Loading callbacks for model training...
+[2025-06-15 17:24:49,505] 37 root - INFO - *******************
+[2025-06-15 17:24:49,505] 38 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 17:24:49,507] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 17:24:49,508] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 17:24:49,508] 52 root - INFO - created directory at: artifacts
+[2025-06-15 17:24:49,509] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 17:24:49,645] 37 root - INFO - Creating validation and training data generators...
+[2025-06-15 17:24:49,686] 49 root - INFO - Creating training data generator with augmentation...
+[2025-06-15 17:24:49,809] 91 root - INFO - Starting model training...
+[2025-06-15 17:24:49,809] 94 root - INFO - Steps per epoch: 130, Validation steps: 32
+[2025-06-15 17:24:49,809] 97 root - INFO - Fitting the model...
+[2025-06-15 17:24:49,809] 17 root - INFO - Creating callbacks for model training...
+[2025-06-15 17:24:49,809] 21 root - INFO - Model directory created at: artifacts\training\best_train_model.h5
+[2025-06-15 17:24:49,809] 24 root - INFO - Creating EarlyStopping
+[2025-06-15 17:24:49,809] 34 root - INFO - Creating ReduceLROnPlateau
+[2025-06-15 17:24:49,809] 44 root - INFO - Creating ModelCheckpoint
+[2025-06-15 17:24:49,809] 55 root - INFO - Returning the list of callbacks.
+[2025-06-15 17:24:49,809] 56 root - INFO - Callbacks: [<keras.callbacks.EarlyStopping object at 0x0000024C8515B7F0>, <keras.callbacks.ReduceLROnPlateau object at 0x0000024C8515BC70>, <keras.callbacks.ModelCheckpoint object at 0x0000024C852632E0>]
+[2025-06-15 17:24:49,809] 57 root - INFO - Callbacks creation completed.
+[2025-06-15 17:24:49,810] 60 root - INFO - Callbacks list: [<keras.callbacks.EarlyStopping object at 0x0000024C8515B7F0>, <keras.callbacks.ReduceLROnPlateau object at 0x0000024C8515BC70>, <keras.callbacks.ModelCheckpoint object at 0x0000024C852632E0>]

@@ -1,0 +1,63 @@
+[2025-06-15 17:10:33,499] 79 root - INFO - Loading callbacks for model training...
+[2025-06-15 17:10:33,499] 37 root - INFO - *******************
+[2025-06-15 17:10:33,499] 38 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 17:10:33,515] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 17:10:33,518] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 17:10:33,518] 52 root - INFO - created directory at: artifacts
+[2025-06-15 17:10:33,519] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 17:10:33,519] 43 root - ERROR - "'ConfigBox' object has no attribute 'param_image_size'"
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'PARAM_IMAGE_SIZE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'PARAM_IMAGE_SIZE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'PARAM_IMAGE_SIZE'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'PARAM_IMAGE_SIZE'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'param_image_size'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'param_image_size'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'param_image_size'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\DL projects\Pneumonia-classification-projects\main.py", line 40, in <module>
+    model_trainer.main()
+  File "E:\DL projects\Pneumonia-classification-projects\src\pipeline\stage_03_model_training.py", line 17, in main
+    training_config = config.get_training_config()
+  File "E:\DL projects\Pneumonia-classification-projects\src\config\configuration.py", line 71, in get_training_config
+    params_image_size=params.PARAM_IMAGE_SIZE,
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'param_image_size'"

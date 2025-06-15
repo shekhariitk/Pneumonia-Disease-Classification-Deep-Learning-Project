@@ -2,9 +2,7 @@ from src.config.configuration import ConfigurationManager
 from src.components.prepare_base_model import PrepareBaseModel
 from src.logger import logging
 
-
-STAGE_NAME = "Prepare base model"
-
+STAGE_NAME = "Prepare Base Model with Custom CNN"
 
 class PrepareBaseModelTrainingPipeline:
     def __init__(self):
@@ -17,15 +15,12 @@ class PrepareBaseModelTrainingPipeline:
         prepare_base_model.get_base_model()
         prepare_base_model.update_base_model()
 
-
-    
 if __name__ == '__main__':
     try:
-        logging.info(f"*******************")
-        logging.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+        logging.info(f"\n{'='*40}\n>>> Stage {STAGE_NAME} started <<<")
         obj = PrepareBaseModelTrainingPipeline()
         obj.main()
-        logging.info(f">>>>>> stage {STAGE_NAME} completed <<<<<<\nx==========x")
+        logging.info(f">>> Stage {STAGE_NAME} completed <<<\n{'='*40}")
     except Exception as e:
         logging.exception(e)
         raise e

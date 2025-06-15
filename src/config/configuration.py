@@ -2,7 +2,8 @@ from src.constants import *
 import os
 from src.utils.common import read_yaml, create_directories,save_json
 from src.entity.config_entity import (DataIngestionConfig,
-                                         PrepareBaseModelConfig)
+                                         PrepareBaseModelConfig,
+                                         TrainingConfig)
 
 
 class ConfigurationManager:
@@ -41,12 +42,42 @@ class ConfigurationManager:
             root_dir=Path(config.root_dir),
             base_model_path=Path(config.base_model_path),
             updated_base_model_path=Path(config.updated_base_model_path),
-            params_image_size=self.params.IMAGE_SIZE,
-            params_learning_rate=self.params.LEARNING_RATE,
-            params_include_top=self.params.INCLUDE_TOP,
-            params_weights=self.params.WEIGHTS,
-            params_classes=self.params.CLASSES
+            params_image_size=self.params.PARAMS_IMAGE_SIZE,
+            params_learning_rate=self.params.PARAMS_LEARNING_RATE,
+            params_include_top=self.params.PARAMS_INCLUDE_TOP,
+            params_weights=self.params.PARAMS_WEIGHTS,
+            params_classes=self.params.PARAMS_CLASSES
         )
 
         return prepare_base_model_config
+    
+    def get_training_config(self) -> TrainingConfig:
+        training = self.config.training
+        prepare_base_model = self.config.prepare_base_model
+        params = self.params
+        training_data = os.path.join(self.config.data_ingestion.unzip_dir, "chest_xray")
+        create_directories([
+            Path(training.root_dir)
+        ])
+        create_directories([
+            Path(training.model_dir)
+        ])
+
+
+        training_config = TrainingConfig(
+            root_dir=Path(training.root_dir),
+            trained_model_path=Path(training.trained_model_path),
+            updated_base_model_path=Path(prepare_base_model.updated_base_model_path),
+            training_data=Path(training_data),
+            params_epochs=params.PARAMS_EPOCHS,
+            params_batch_size=params.PARAMS_BATCH_SIZE,
+            params_is_augmentation=params.AUGMENTATION,
+            params_image_size=params.PARAMS_IMAGE_SIZE,
+            best_trained_model_path=Path(training.best_trained_model_path)
+
+
+        )
+
+        return training_config
+ 
   

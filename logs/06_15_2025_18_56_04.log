@@ -1,0 +1,48 @@
+[2025-06-15 18:56:35,594] 73 root - INFO - Loading callbacks for model training...
+[2025-06-15 18:56:35,595] 22 root - INFO - 
+****************************************
+[2025-06-15 18:56:35,595] 23 root - INFO - >>>>>> Stage Prepare base model started <<<<<<
+[2025-06-15 18:56:35,624] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 18:56:35,643] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 18:56:35,644] 52 root - INFO - created directory at: artifacts
+[2025-06-15 18:56:35,644] 52 root - INFO - created directory at: artifacts/prepare_base_model
+[2025-06-15 18:56:35,645] 14 root - INFO - Creating base model with input shape: (128, 128, 3)
+[2025-06-15 18:56:35,763] 35 root - INFO - Base model created successfully
+[2025-06-15 18:56:35,768] 36 root - INFO - Base model summary:
+None
+[2025-06-15 18:56:35,769] 359 tensorflow - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2025-06-15 18:56:35,829] 87 root - INFO - Model saved to artifacts\prepare_base_model\base_model.h5
+[2025-06-15 18:56:35,829] 41 root - INFO - Base model saved to artifacts\prepare_base_model\base_model.h5
+[2025-06-15 18:56:35,829] 47 root - INFO - Updating base model with additional layers
+[2025-06-15 18:56:35,868] 65 root - INFO - Full model created with custom layers
+[2025-06-15 18:56:35,909] 66 root - INFO - Full model summary:
+None
+[2025-06-15 18:56:35,984] 87 root - INFO - Model saved to artifacts\prepare_base_model\base_model_updated.h5
+[2025-06-15 18:56:35,984] 81 root - INFO - Updated base model saved to artifacts\prepare_base_model\base_model_updated.h5
+[2025-06-15 18:56:35,985] 26 root - INFO - >>>>>> Stage Prepare base model completed <<<<<<
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[2025-06-15 18:56:35,985] 33 root - INFO - *******************
+[2025-06-15 18:56:35,986] 34 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 18:56:35,988] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 18:56:35,989] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 18:56:35,990] 52 root - INFO - created directory at: artifacts
+[2025-06-15 18:56:35,991] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 18:56:35,991] 52 root - INFO - created directory at: Model
+[2025-06-15 18:56:36,134] 35 root - INFO - Creating validation and training data generators...
+[2025-06-15 18:56:36,171] 46 root - INFO - Creating training data generator with augmentation...
+[2025-06-15 18:56:36,376] 97 root - INFO - Starting model training...
+[2025-06-15 18:56:36,376] 100 root - INFO - Steps per epoch: 163, Validation steps: 19
+[2025-06-15 18:56:36,376] 103 root - INFO - Fitting the model...
+[2025-06-15 18:56:36,377] 19 root - INFO - Creating callbacks for model training...
+[2025-06-15 18:56:36,378] 23 root - INFO - Model directory created at: Model\train_model.h5
+[2025-06-15 18:56:36,380] 26 root - INFO - Creating EarlyStopping
+[2025-06-15 18:56:36,381] 36 root - INFO - Creating ReduceLROnPlateau
+[2025-06-15 18:56:36,384] 46 root - INFO - Creating ModelCheckpoint
+[2025-06-15 18:56:36,386] 57 root - INFO - Returning the list of callbacks.
+[2025-06-15 18:56:36,386] 58 root - INFO - Callbacks: [<keras.callbacks.EarlyStopping object at 0x000002089228D3F0>, <keras.callbacks.ReduceLROnPlateau object at 0x000002089228E9E0>, <keras.callbacks.ModelCheckpoint object at 0x000002089228D4B0>]
+[2025-06-15 18:56:36,386] 59 root - INFO - Callbacks creation completed.
+[2025-06-15 18:56:36,387] 62 root - INFO - Callbacks list: [<keras.callbacks.EarlyStopping object at 0x000002089228D3F0>, <keras.callbacks.ReduceLROnPlateau object at 0x000002089228E9E0>, <keras.callbacks.ModelCheckpoint object at 0x000002089228D4B0>]
+[2025-06-15 18:56:36,387] 85 root - INFO - Calculating class weights for imbalanced dataset...
+[2025-06-15 18:56:36,387] 74 root - INFO - ClassWeightCalculator initialized.
+[2025-06-15 18:56:36,457] 91 root - INFO - Computed class weights: {0: 1.9448173005219984, 1: 0.6730322580645162}
+[2025-06-15 18:56:36,457] 92 root - INFO - Class weights computed successfully.

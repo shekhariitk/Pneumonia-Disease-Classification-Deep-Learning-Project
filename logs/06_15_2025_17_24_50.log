@@ -1,0 +1,21 @@
+[2025-06-15 17:24:53,913] 77 root - INFO - Loading callbacks for model training...
+[2025-06-15 17:24:53,914] 37 root - INFO - *******************
+[2025-06-15 17:24:53,914] 38 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 17:24:53,916] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 17:24:53,918] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 17:24:53,918] 52 root - INFO - created directory at: artifacts
+[2025-06-15 17:24:53,919] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 17:24:54,055] 37 root - INFO - Creating validation and training data generators...
+[2025-06-15 17:24:54,099] 49 root - INFO - Creating training data generator with augmentation...
+[2025-06-15 17:24:54,227] 91 root - INFO - Starting model training...
+[2025-06-15 17:24:54,228] 94 root - INFO - Steps per epoch: 130, Validation steps: 32
+[2025-06-15 17:24:54,228] 97 root - INFO - Fitting the model...
+[2025-06-15 17:24:54,228] 17 root - INFO - Creating callbacks for model training...
+[2025-06-15 17:24:54,229] 21 root - INFO - Model directory created at: artifacts\training\best_train_model.h5
+[2025-06-15 17:24:54,229] 24 root - INFO - Creating EarlyStopping
+[2025-06-15 17:24:54,229] 34 root - INFO - Creating ReduceLROnPlateau
+[2025-06-15 17:24:54,230] 44 root - INFO - Creating ModelCheckpoint
+[2025-06-15 17:24:54,230] 55 root - INFO - Returning the list of callbacks.
+[2025-06-15 17:24:54,230] 56 root - INFO - Callbacks: [<keras.callbacks.EarlyStopping object at 0x0000022A0EB16D70>, <keras.callbacks.ReduceLROnPlateau object at 0x0000022A0EBD6110>, <keras.callbacks.ModelCheckpoint object at 0x0000022A0EBD5B40>]
+[2025-06-15 17:24:54,230] 57 root - INFO - Callbacks creation completed.
+[2025-06-15 17:24:54,231] 60 root - INFO - Callbacks list: [<keras.callbacks.EarlyStopping object at 0x0000022A0EB16D70>, <keras.callbacks.ReduceLROnPlateau object at 0x0000022A0EBD6110>, <keras.callbacks.ModelCheckpoint object at 0x0000022A0EBD5B40>]

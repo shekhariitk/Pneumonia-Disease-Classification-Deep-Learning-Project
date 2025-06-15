@@ -1,0 +1,21 @@
+[2025-06-15 17:21:33,771] 77 root - INFO - Loading callbacks for model training...
+[2025-06-15 17:21:33,772] 37 root - INFO - *******************
+[2025-06-15 17:21:33,772] 38 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 17:21:33,774] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 17:21:33,775] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 17:21:33,776] 52 root - INFO - created directory at: artifacts
+[2025-06-15 17:21:33,776] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 17:21:33,923] 37 root - INFO - Creating validation and training data generators...
+[2025-06-15 17:21:33,964] 49 root - INFO - Creating training data generator with augmentation...
+[2025-06-15 17:21:34,095] 91 root - INFO - Starting model training...
+[2025-06-15 17:21:34,096] 94 root - INFO - Steps per epoch: 130, Validation steps: 32
+[2025-06-15 17:21:34,096] 97 root - INFO - Fitting the model...
+[2025-06-15 17:21:34,096] 17 root - INFO - Creating callbacks for model training...
+[2025-06-15 17:21:34,096] 21 root - INFO - Model directory created at: artifacts\training\best_train_model.h5
+[2025-06-15 17:21:34,096] 24 root - INFO - Creating EarlyStopping
+[2025-06-15 17:21:34,097] 34 root - INFO - Creating ReduceLROnPlateau
+[2025-06-15 17:21:34,097] 44 root - INFO - Creating ModelCheckpoint
+[2025-06-15 17:21:34,097] 55 root - INFO - Returning the list of callbacks.
+[2025-06-15 17:21:34,097] 56 root - INFO - Callbacks: [<keras.callbacks.EarlyStopping object at 0x000001C4E18C3B20>, <keras.callbacks.ReduceLROnPlateau object at 0x000001C4E19527A0>, <keras.callbacks.ModelCheckpoint object at 0x000001C4E1953460>]
+[2025-06-15 17:21:34,097] 57 root - INFO - Callbacks creation completed.
+[2025-06-15 17:21:34,097] 60 root - INFO - Callbacks list: [<keras.callbacks.EarlyStopping object at 0x000001C4E18C3B20>, <keras.callbacks.ReduceLROnPlateau object at 0x000001C4E19527A0>, <keras.callbacks.ModelCheckpoint object at 0x000001C4E1953460>]

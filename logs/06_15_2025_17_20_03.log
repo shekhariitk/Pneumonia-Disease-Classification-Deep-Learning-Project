@@ -1,0 +1,21 @@
+[2025-06-15 17:20:06,097] 77 root - INFO - Loading callbacks for model training...
+[2025-06-15 17:20:06,097] 37 root - INFO - *******************
+[2025-06-15 17:20:06,098] 38 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 17:20:06,099] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 17:20:06,100] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 17:20:06,101] 52 root - INFO - created directory at: artifacts
+[2025-06-15 17:20:06,101] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 17:20:06,239] 37 root - INFO - Creating validation and training data generators...
+[2025-06-15 17:20:06,300] 49 root - INFO - Creating training data generator with augmentation...
+[2025-06-15 17:20:06,423] 91 root - INFO - Starting model training...
+[2025-06-15 17:20:06,424] 94 root - INFO - Steps per epoch: 130, Validation steps: 32
+[2025-06-15 17:20:06,424] 97 root - INFO - Fitting the model...
+[2025-06-15 17:20:06,424] 43 root - ERROR - Training.load_callbacks() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "E:\DL projects\Pneumonia-classification-projects\main.py", line 40, in <module>
+    model_trainer.main()
+  File "E:\DL projects\Pneumonia-classification-projects\src\pipeline\stage_03_model_training.py", line 21, in main
+    training.train()
+  File "E:\DL projects\Pneumonia-classification-projects\src\components\model_training.py", line 104, in train
+    callbacks=self.load_callbacks(self),
+TypeError: Training.load_callbacks() takes 1 positional argument but 2 were given

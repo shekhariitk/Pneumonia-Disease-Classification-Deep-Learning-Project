@@ -1,0 +1,10 @@
+[2025-06-15 14:47:00,158] 21 root - INFO - *******************
+[2025-06-15 14:47:00,159] 22 root - INFO - >>>>>> stage Prepare base model started <<<<<<
+[2025-06-15 14:47:00,201] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 14:47:00,209] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 14:47:00,211] 52 root - INFO - created directory at: artifacts
+[2025-06-15 14:47:00,213] 52 root - INFO - created directory at: artifacts/prepare_base_model
+[2025-06-15 14:47:02,193] 359 tensorflow - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2025-06-15 14:47:03,021] 25 root - INFO - >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x

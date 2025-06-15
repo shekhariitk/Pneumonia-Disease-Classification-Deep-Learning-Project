@@ -1,0 +1,22 @@
+[2025-06-15 18:03:16,521] 75 root - INFO - Loading callbacks for model training...
+[2025-06-15 18:03:16,521] 33 root - INFO - *******************
+[2025-06-15 18:03:16,521] 34 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 18:03:16,523] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 18:03:16,541] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 18:03:16,542] 52 root - INFO - created directory at: artifacts
+[2025-06-15 18:03:16,542] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 18:03:16,542] 52 root - INFO - created directory at: Model
+[2025-06-15 18:03:16,679] 36 root - INFO - Creating validation and training data generators...
+[2025-06-15 18:03:16,704] 47 root - INFO - Creating training data generator with augmentation...
+[2025-06-15 18:03:16,863] 89 root - INFO - Starting model training...
+[2025-06-15 18:03:16,863] 92 root - INFO - Steps per epoch: 163, Validation steps: 19
+[2025-06-15 18:03:16,863] 95 root - INFO - Fitting the model...
+[2025-06-15 18:03:16,863] 17 root - INFO - Creating callbacks for model training...
+[2025-06-15 18:03:16,863] 21 root - INFO - Model directory created at: Model\train_model.h5
+[2025-06-15 18:03:16,863] 24 root - INFO - Creating EarlyStopping
+[2025-06-15 18:03:16,864] 34 root - INFO - Creating ReduceLROnPlateau
+[2025-06-15 18:03:16,864] 44 root - INFO - Creating ModelCheckpoint
+[2025-06-15 18:03:16,864] 55 root - INFO - Returning the list of callbacks.
+[2025-06-15 18:03:16,864] 56 root - INFO - Callbacks: [<keras.callbacks.EarlyStopping object at 0x00000205E7BFF5B0>, <keras.callbacks.ReduceLROnPlateau object at 0x00000205E7D036A0>, <keras.callbacks.ModelCheckpoint object at 0x00000205E7D03CA0>]
+[2025-06-15 18:03:16,864] 57 root - INFO - Callbacks creation completed.
+[2025-06-15 18:03:16,864] 60 root - INFO - Callbacks list: [<keras.callbacks.EarlyStopping object at 0x00000205E7BFF5B0>, <keras.callbacks.ReduceLROnPlateau object at 0x00000205E7D036A0>, <keras.callbacks.ModelCheckpoint object at 0x00000205E7D03CA0>]

@@ -1,0 +1,21 @@
+[2025-06-15 17:18:49,461] 77 root - INFO - Loading callbacks for model training...
+[2025-06-15 17:18:49,461] 37 root - INFO - *******************
+[2025-06-15 17:18:49,462] 38 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-15 17:18:49,464] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 17:18:49,464] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 17:18:49,465] 52 root - INFO - created directory at: artifacts
+[2025-06-15 17:18:49,465] 52 root - INFO - created directory at: artifacts\training
+[2025-06-15 17:18:49,606] 37 root - INFO - Creating validation and training data generators...
+[2025-06-15 17:18:49,606] 43 root - ERROR - [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\chest_xray\\train\\train'
+Traceback (most recent call last):
+  File "E:\DL projects\Pneumonia-classification-projects\main.py", line 40, in <module>
+    model_trainer.main()
+  File "E:\DL projects\Pneumonia-classification-projects\src\pipeline\stage_03_model_training.py", line 20, in main
+    training.train_valid_generator()
+  File "E:\DL projects\Pneumonia-classification-projects\src\components\model_training.py", line 42, in train_valid_generator
+    self.valid_generator = valid_datagenerator.flow_from_directory(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\keras\preprocessing\image.py", line 1648, in flow_from_directory
+    return DirectoryIterator(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\keras\preprocessing\image.py", line 563, in __init__
+    for subdir in sorted(os.listdir(directory)):
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'artifacts\\data_ingestion\\chest_xray\\train\\train'
