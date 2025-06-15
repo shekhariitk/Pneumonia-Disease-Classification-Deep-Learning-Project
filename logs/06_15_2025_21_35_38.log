@@ -1,0 +1,62 @@
+[2025-06-15 21:35:41,706] 73 root - INFO - Loading callbacks for model training...
+[2025-06-15 21:35:42,596] 45 root - INFO - *******************
+[2025-06-15 21:35:42,596] 46 root - INFO - >>>>>> stage Evaluation stage started <<<<<<
+[2025-06-15 21:35:42,598] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 21:35:42,599] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 21:35:42,600] 52 root - INFO - created directory at: artifacts
+[2025-06-15 21:35:42,600] 52 root - ERROR - "'ConfigBox' object has no attribute 'best_trained_model_path'"
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'best_trained_model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'best_trained_model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'best_trained_model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\config_box.py", line 28, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'best_trained_model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 503, in box.box.Box.__getitem__
+KeyError: 'best_trained_model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box\box.py", line 536, in box.box.Box.__getattr__
+  File "box\box.py", line 524, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'best_trained_model_path'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box\box.py", line 538, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'best_trained_model_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\DL projects\Pneumonia-classification-projects\main.py", line 48, in main
+    model_evalution.main()
+  File "E:\DL projects\Pneumonia-classification-projects\src\pipeline\stage_04_model_evaluation.py", line 16, in main
+    eval_config = config.get_evaluation_config()
+  File "E:\DL projects\Pneumonia-classification-projects\src\config\configuration.py", line 86, in get_evaluation_config
+    path_of_model=self.config.best_trained_model_path,
+  File "box\config_box.py", line 30, in box.config_box.ConfigBox.__getattr__
+  File "box\box.py", line 552, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'best_trained_model_path'"

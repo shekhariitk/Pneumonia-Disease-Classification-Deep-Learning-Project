@@ -48,7 +48,7 @@ class Callbacks:
 
         
         model_checkpoint = ModelCheckpoint(
-            filepath=os.path.join(self.model_dir, "best_model.h5"),
+            filepath=self.model_dir,
             monitor=self.monitor,
             save_best_only=True,
             mode=self.mode

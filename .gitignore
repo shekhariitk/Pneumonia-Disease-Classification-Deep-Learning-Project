@@ -6,3 +6,9 @@ datasets/
 
 # ignore the artifact directory
 artifacts/
+
+# ignore the .env directory
+.env/
+
+# ignore mlflow tracking directory
+mlruns/

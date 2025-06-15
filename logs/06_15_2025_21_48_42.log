@@ -1,0 +1,14 @@
+[2025-06-15 21:48:45,702] 73 root - INFO - Loading callbacks for model training...
+[2025-06-15 21:48:46,684] 45 root - INFO - *******************
+[2025-06-15 21:48:46,684] 46 root - INFO - >>>>>> stage Evaluation stage started <<<<<<
+[2025-06-15 21:48:46,686] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 21:48:46,687] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 21:48:46,688] 52 root - INFO - created directory at: artifacts
+[2025-06-15 21:48:54,410] 66 root - INFO - json file saved at: scores.json
+[2025-06-15 21:48:54,410] 66 root - INFO - json file saved at: scores.json
+[2025-06-15 21:48:55,497] 274 absl - WARNING - Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 6). These functions will not be directly callable after loading.
+[2025-06-15 21:48:55,860] 797 tensorflow - INFO - Assets written to: C:\Users\SHEKHA~1\AppData\Local\Temp\tmpureksawe\model\data\model\assets
+[2025-06-15 21:49:02,617] 87 root - INFO - Model and metrics logged into MLflow successfully.
+[2025-06-15 21:49:02,619] 49 root - INFO - >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x

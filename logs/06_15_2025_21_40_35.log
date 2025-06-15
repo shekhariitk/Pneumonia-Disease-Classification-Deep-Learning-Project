@@ -1,0 +1,23 @@
+[2025-06-15 21:40:38,864] 73 root - INFO - Loading callbacks for model training...
+[2025-06-15 21:40:39,711] 45 root - INFO - *******************
+[2025-06-15 21:40:39,712] 46 root - INFO - >>>>>> stage Evaluation stage started <<<<<<
+[2025-06-15 21:40:39,713] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 21:40:39,714] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 21:40:39,715] 52 root - INFO - created directory at: artifacts
+[2025-06-15 21:40:39,717] 52 root - ERROR - No file or directory found at Model\train_model.h5
+Traceback (most recent call last):
+  File "E:\DL projects\Pneumonia-classification-projects\main.py", line 48, in main
+    model_evalution.main()
+  File "E:\DL projects\Pneumonia-classification-projects\src\pipeline\stage_04_model_evaluation.py", line 18, in main
+    evaluation.evaluation()
+  File "E:\DL projects\Pneumonia-classification-projects\src\components\model_evaluation.py", line 57, in evaluation
+    self.model = self.load_model(self.config.path_of_model)
+  File "E:\DL projects\Pneumonia-classification-projects\src\components\model_evaluation.py", line 54, in load_model
+    return tf.keras.models.load_model(path)
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\keras\saving\saving_api.py", line 212, in load_model
+    return legacy_sm_saving_lib.load_model(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\keras\saving\legacy\save.py", line 230, in load_model
+    raise IOError(
+OSError: No file or directory found at Model\train_model.h5

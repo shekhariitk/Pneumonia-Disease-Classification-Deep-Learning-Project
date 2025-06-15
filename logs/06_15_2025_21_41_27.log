@@ -1,0 +1,37 @@
+[2025-06-15 21:41:31,095] 73 root - INFO - Loading callbacks for model training...
+[2025-06-15 21:41:31,954] 45 root - INFO - *******************
+[2025-06-15 21:41:31,955] 46 root - INFO - >>>>>> stage Evaluation stage started <<<<<<
+[2025-06-15 21:41:31,982] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 21:41:31,984] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 21:41:31,985] 52 root - INFO - created directory at: artifacts
+[2025-06-15 21:41:39,551] 66 root - INFO - json file saved at: scores.json
+[2025-06-15 21:41:39,552] 66 root - INFO - json file saved at: scores.json
+[2025-06-15 21:41:40,611] 274 absl - WARNING - Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 6). These functions will not be directly callable after loading.
+[2025-06-15 21:41:40,977] 797 tensorflow - INFO - Assets written to: C:\Users\SHEKHA~1\AppData\Local\Temp\tmpulo757mx\model\data\model\assets
+[2025-06-15 21:41:50,303] 52 root - ERROR - No module named 'distutils._modified'
+Traceback (most recent call last):
+  File "E:\DL projects\Pneumonia-classification-projects\main.py", line 48, in main
+    model_evalution.main()
+  File "E:\DL projects\Pneumonia-classification-projects\src\pipeline\stage_04_model_evaluation.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "E:\DL projects\Pneumonia-classification-projects\src\components\model_evaluation.py", line 85, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model")
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\tensorflow\__init__.py", line 222, in log_model
+    return Model.log(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\models\model.py", line 552, in log
+    mlflow.tracking.fluent.log_artifacts(local_path, mlflow_model.artifact_path)
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\tracking\fluent.py", line 817, in log_artifacts
+    MlflowClient().log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\tracking\client.py", line 1069, in log_artifacts
+    self._tracking_client.log_artifacts(run_id, local_dir, artifact_path)
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 448, in log_artifacts
+    self._get_artifact_repo(run_id).log_artifacts(local_dir, artifact_path)
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\store\artifact\local_artifact_repo.py", line 58, in log_artifacts
+    dir_util.copy_tree(src=local_dir, dst=artifact_dir, preserve_mode=0, preserve_times=0)
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\setuptools\_distutils\dir_util.py", line 150, in copy_tree
+    return list(itertools.chain.from_iterable(map(copy_one, names)))
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\setuptools\_distutils\dir_util.py", line 192, in _copy_one
+    file_util.copy_file(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\setuptools\_distutils\file_util.py", line 104, in copy_file
+    from distutils._modified import newer
+ModuleNotFoundError: No module named 'distutils._modified'

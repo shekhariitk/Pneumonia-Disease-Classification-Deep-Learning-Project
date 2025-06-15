@@ -1,0 +1,37 @@
+[2025-06-15 21:54:50,767] 73 root - INFO - Loading callbacks for model training...
+[2025-06-15 21:54:51,726] 45 root - INFO - *******************
+[2025-06-15 21:54:51,727] 46 root - INFO - >>>>>> stage Evaluation stage started <<<<<<
+[2025-06-15 21:54:51,729] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 21:54:51,730] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 21:54:51,730] 52 root - INFO - created directory at: artifacts
+[2025-06-15 21:54:59,265] 66 root - INFO - json file saved at: scores.json
+[2025-06-15 21:54:59,265] 66 root - INFO - json file saved at: scores.json
+[2025-06-15 21:55:02,984] 52 root - ERROR - INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}
+Traceback (most recent call last):
+  File "E:\DL projects\Pneumonia-classification-projects\main.py", line 48, in main
+    model_evalution.main()
+  File "E:\DL projects\Pneumonia-classification-projects\src\pipeline\stage_04_model_evaluation.py", line 20, in main
+    evaluation.log_into_mlflow()
+  File "E:\DL projects\Pneumonia-classification-projects\src\components\model_evaluation.py", line 84, in log_into_mlflow
+    mlflow.keras.log_model(self.model, "model", registered_model_name="PneumoniaClassifier")
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\tensorflow\__init__.py", line 229, in log_model
+    return Model.log(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\models\model.py", line 1161, in log
+    model = mlflow.initialize_logged_model(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\tracking\fluent.py", line 2130, in initialize_logged_model
+    model = _create_logged_model(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\tracking\fluent.py", line 2257, in _create_logged_model
+    return MlflowClient().create_logged_model(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\tracking\client.py", line 5356, in create_logged_model
+    return self._tracking_client.create_logged_model(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\tracking\_tracking_service\client.py", line 824, in create_logged_model
+    return self.store.create_logged_model(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\store\tracking\rest_store.py", line 936, in create_logged_model
+    response_proto = self._call_endpoint(CreateLoggedModel, req_body)
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\store\tracking\rest_store.py", line 135, in _call_endpoint
+    return call_endpoint(
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\utils\rest_utils.py", line 590, in call_endpoint
+    response = verify_rest_response(response, endpoint)
+  File "E:\DL projects\Pneumonia-classification-projects\venvcnn\lib\site-packages\mlflow\utils\rest_utils.py", line 304, in verify_rest_response
+    raise RestException(json.loads(response.text))
+mlflow.exceptions.RestException: INTERNAL_ERROR: Response: {'error': 'unsupported endpoint, please contact support@dagshub.com'}

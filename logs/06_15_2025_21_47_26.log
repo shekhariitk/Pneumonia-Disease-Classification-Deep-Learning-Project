@@ -1,0 +1,6 @@
+[2025-06-15 21:47:30,178] 73 root - INFO - Loading callbacks for model training...
+[2025-06-15 21:47:31,362] 45 root - INFO - *******************
+[2025-06-15 21:47:31,363] 46 root - INFO - >>>>>> stage Evaluation stage started <<<<<<
+[2025-06-15 21:47:31,364] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-15 21:47:31,366] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-15 21:47:31,366] 52 root - INFO - created directory at: artifacts
