@@ -60,9 +60,6 @@ class ConfigurationManager:
         create_directories([
             Path(training.root_dir)
         ])
-        create_directories([
-            Path(training.model_dir)
-        ])
 
 
         training_config = TrainingConfig(
@@ -74,7 +71,7 @@ class ConfigurationManager:
             params_batch_size=params.PARAMS_BATCH_SIZE,
             params_is_augmentation=params.AUGMENTATION,
             params_image_size=params.PARAMS_IMAGE_SIZE,
-            best_trained_model_path=Path(training.best_trained_model_path)
+            model_direct=Path(training.model_dir)
 
 
         )

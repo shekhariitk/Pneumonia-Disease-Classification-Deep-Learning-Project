@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
 
 # Load model
-model = load_model(r'Model\best_model.h5')
+model = load_model(r'Model\model\best_model.h5')
 
 def allowed_file(filename):
     return '.' in filename and \

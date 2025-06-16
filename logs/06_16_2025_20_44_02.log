@@ -1,0 +1,49 @@
+[2025-06-16 20:44:06,564] 73 root - INFO - Loading callbacks for model training...
+[2025-06-16 20:44:08,750] 13 root - INFO - >>>>>> stage Data Ingestion stage started <<<<<<
+[2025-06-16 20:44:08,754] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-16 20:44:08,756] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-16 20:44:08,757] 52 root - INFO - created directory at: artifacts
+[2025-06-16 20:44:08,758] 52 root - INFO - created directory at: artifacts/data_ingestion
+[2025-06-16 20:44:08,758] 24 root - INFO - Downloading data from https://drive.google.com/file/d/1nmR9kchQlUZk0PQMx_NnRMCBgggfWBeZ/view?usp=sharing into file artifacts/data_ingestion/data.zip
+[2025-06-16 20:48:34,054] 30 root - INFO - Downloaded data from https://drive.google.com/file/d/1nmR9kchQlUZk0PQMx_NnRMCBgggfWBeZ/view?usp=sharing into file artifacts/data_ingestion/data.zip
+[2025-06-16 20:48:41,844] 47 root - INFO - Extracted zip file into artifacts/data_ingestion
+[2025-06-16 20:48:41,845] 16 root - INFO - >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x
+[2025-06-16 20:48:41,845] 23 root - INFO - 
+****************************************
+[2025-06-16 20:48:41,845] 24 root - INFO - >>>>>> Stage Prepare base model started <<<<<<
+[2025-06-16 20:48:41,846] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-16 20:48:41,848] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-16 20:48:41,848] 52 root - INFO - created directory at: artifacts
+[2025-06-16 20:48:41,848] 52 root - INFO - created directory at: artifacts/prepare_base_model
+[2025-06-16 20:48:41,848] 14 root - INFO - Creating base model with input shape: (256, 256, 3)
+[2025-06-16 20:48:41,952] 35 root - INFO - Base model created successfully
+[2025-06-16 20:48:41,956] 36 root - INFO - Base model summary:
+None
+[2025-06-16 20:48:41,956] 359 tensorflow - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2025-06-16 20:48:41,973] 87 root - INFO - Model saved to artifacts\prepare_base_model\base_model.h5
+[2025-06-16 20:48:41,973] 41 root - INFO - Base model saved to artifacts\prepare_base_model\base_model.h5
+[2025-06-16 20:48:41,973] 47 root - INFO - Updating base model with additional layers
+[2025-06-16 20:48:42,006] 65 root - INFO - Full model created with custom layers
+[2025-06-16 20:48:42,012] 66 root - INFO - Full model summary:
+None
+[2025-06-16 20:48:42,064] 87 root - INFO - Model saved to artifacts\prepare_base_model\base_model_updated.h5
+[2025-06-16 20:48:42,065] 81 root - INFO - Updated base model saved to artifacts\prepare_base_model\base_model_updated.h5
+[2025-06-16 20:48:42,065] 27 root - INFO - >>>>>> Stage Prepare base model completed <<<<<<
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+[2025-06-16 20:48:42,065] 34 root - INFO - *******************
+[2025-06-16 20:48:42,066] 35 root - INFO - >>>>>> stage Model Training started <<<<<<
+[2025-06-16 20:48:42,068] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-16 20:48:42,071] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-16 20:48:42,072] 52 root - INFO - created directory at: artifacts
+[2025-06-16 20:48:42,074] 52 root - INFO - created directory at: artifacts\training
+[2025-06-16 20:48:42,075] 40 root - ERROR - TrainingConfig.__init__() got an unexpected keyword argument 'model_direct'
+Traceback (most recent call last):
+  File "E:\DL projects\Pneumonia-classification-projects\main.py", line 37, in main
+    model_trainer.main()
+  File "E:\DL projects\Pneumonia-classification-projects\src\pipeline\stage_03_model_training.py", line 17, in main
+    training_config = config.get_training_config()
+  File "E:\DL projects\Pneumonia-classification-projects\src\config\configuration.py", line 65, in get_training_config
+    training_config = TrainingConfig(
+TypeError: TrainingConfig.__init__() got an unexpected keyword argument 'model_direct'

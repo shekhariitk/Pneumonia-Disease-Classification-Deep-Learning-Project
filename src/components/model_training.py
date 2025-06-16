@@ -73,7 +73,7 @@ class Training:
     logging.info("Loading callbacks for model training...")
     def load_callbacks(self):
         callbacks = Callbacks(
-            model_dir=self.config.best_trained_model_path,
+            model_dir=self.config.model_direct,
             patience=5,
             monitor='val_loss',
             mode='min'

@@ -1,4 +1,4 @@
-# creating callbacks for the model training
+# callbacks.py
 import tensorflow as tf
 from typing import List
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, ModelCheckpoint
@@ -21,11 +21,13 @@ class Callbacks:
         # Ensure the model directory exists
         os.makedirs(self.model_dir, exist_ok=True)
         logging.info(f"Model directory created at: {self.model_dir}")
-        # Define the callbacks
 
+        # Construct file path to save the best model
+        model_path = os.path.join(self.model_dir, "best_model.h5")
+        logging.info(f"Model will be saved to: {model_path}")
+
+        # Callback: EarlyStopping
         logging.info("Creating EarlyStopping")
-        # Early stopping to prevent overfitting
-
         early_stopping = EarlyStopping(
             monitor=self.monitor,
             patience=self.patience,
@@ -33,51 +35,38 @@ class Callbacks:
             restore_best_weights=True
         )
 
+        # Callback: ReduceLROnPlateau
         logging.info("Creating ReduceLROnPlateau")
-        # Reduce learning rate when a metric has stopped improving
-
         reduce_lr = ReduceLROnPlateau(
             monitor=self.monitor,
             factor=0.2,
             patience=2,
-            min_lr=1e-6,
+            min_lr=1e-8,
             mode=self.mode
         )
-        logging.info("Creating ModelCheckpoint")
-        # Save the best model based on the monitored metric
 
-        
+        # Callback: ModelCheckpoint
+        logging.info("Creating ModelCheckpoint")
         model_checkpoint = ModelCheckpoint(
-            filepath=self.model_dir,
+            filepath=model_path,
             monitor=self.monitor,
             save_best_only=True,
             mode=self.mode
         )
 
-        logging.info("Returning the list of callbacks.")
-        logging.info(f"Callbacks: {[early_stopping, reduce_lr, model_checkpoint]}")
-        logging.info("Callbacks creation completed.")
-
         callbacks_list = [early_stopping, reduce_lr, model_checkpoint]
-        logging.info(f"Callbacks list: {callbacks_list}")
+        logging.info(f"Callbacks list created: {callbacks_list}")
+        return callbacks_list
 
-        return  callbacks_list
-        logging.info("Callbacks creation completed.")
 
 class ClassWeightCalculator:
-    def __init__(self,train_classes) -> None:
+    def __init__(self, train_classes) -> None:
         self.train_classes = train_classes
-        """
-        Initialize the ClassWeightCalculator.
-        This class is used to compute class weights for imbalanced datasets.
-        """
         logging.info("ClassWeightCalculator initialized.")
 
     def compute_class_weights(self) -> dict:
         """
         Compute class weights for imbalanced datasets.
-        Args:
-            train_classes: Array-like of class labels (e.g., train.classes from ImageDataGenerator).
         Returns:
             dict: Class weights in the format expected by Keras.
         """
@@ -87,13 +76,9 @@ class ClassWeightCalculator:
             classes=unique_classes,
             y=self.train_classes
         )
-
-        logging.info(f"Computed class weights: {dict(zip(unique_classes, weights))}")
-        logging.info("Class weights computed successfully.")
-        class_weights = dict(zip(unique_classes, weights)) 
+        class_weights = dict(zip(unique_classes, weights))
+        logging.info(f"Computed class weights: {class_weights}")
         return class_weights
-        logging.info("ClassWeightCalculator compute_class_weights method completed.")
-
 
 
 

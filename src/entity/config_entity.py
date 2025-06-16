@@ -31,7 +31,7 @@ class TrainingConfig:
     params_batch_size: int
     params_is_augmentation: bool
     params_image_size: list
-    best_trained_model_path: Path
+    model_direct: Path
 
 @dataclass(frozen=True)
 class EvaluationConfig:

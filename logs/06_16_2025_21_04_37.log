@@ -1,0 +1,22 @@
+[2025-06-16 21:04:51,165] 20 root - INFO - 
+========================================
+>>> Stage Prepare Base Model with Custom CNN started <<<
+[2025-06-16 21:04:51,174] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-16 21:04:51,179] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-16 21:04:51,180] 52 root - INFO - created directory at: artifacts
+[2025-06-16 21:04:51,183] 52 root - INFO - created directory at: artifacts/prepare_base_model
+[2025-06-16 21:04:51,183] 14 root - INFO - Creating base model with input shape: (256, 256, 3)
+[2025-06-16 21:04:51,595] 35 root - INFO - Base model created successfully
+[2025-06-16 21:04:51,612] 36 root - INFO - Base model summary:
+None
+[2025-06-16 21:04:51,615] 359 tensorflow - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[2025-06-16 21:04:51,715] 87 root - INFO - Model saved to artifacts\prepare_base_model\base_model.h5
+[2025-06-16 21:04:51,716] 41 root - INFO - Base model saved to artifacts\prepare_base_model\base_model.h5
+[2025-06-16 21:04:51,717] 47 root - INFO - Updating base model with additional layers
+[2025-06-16 21:04:51,884] 65 root - INFO - Full model created with custom layers
+[2025-06-16 21:04:51,912] 66 root - INFO - Full model summary:
+None
+[2025-06-16 21:04:52,076] 87 root - INFO - Model saved to artifacts\prepare_base_model\base_model_updated.h5
+[2025-06-16 21:04:52,076] 81 root - INFO - Updated base model saved to artifacts\prepare_base_model\base_model_updated.h5
+[2025-06-16 21:04:52,077] 23 root - INFO - >>> Stage Prepare Base Model with Custom CNN completed <<<
+========================================

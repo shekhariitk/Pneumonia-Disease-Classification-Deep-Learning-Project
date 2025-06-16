@@ -1,0 +1,117 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/pipeline/stage_01_data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 159c5d89cc14313782a87ef61a93d11f
+      size: 674
+    - path: src/pipeline/stage_01_data_ingestion.py
+      hash: md5
+      md5: 0ef19a0102c520598bb24d51f5e458a2
+      size: 889
+    outs:
+    - path: artifacts/data_ingestion/chest_xray
+      hash: md5
+      md5: 5e95cbf05923c6f7a093e84fbdba9463.dir
+      size: 1236482806
+      nfiles: 5856
+  prepare_base_model:
+    cmd: python src/pipeline/stage_02_prepare_base_model.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: 159c5d89cc14313782a87ef61a93d11f
+      size: 674
+    - path: src/pipeline/stage_02_prepare_base_model.py
+      hash: md5
+      md5: b07868ef6306c3832778e3510c9a3b12
+      size: 935
+    params:
+      params.yaml:
+        PARAMS_CLASSES: 1
+        PARAMS_IMAGE_SIZE:
+        - 256
+        - 256
+        - 3
+        PARAMS_INCLUDE_TOP: false
+        PARAMS_LEARNING_RATE: 0.001
+        PARAMS_WEIGHTS:
+    outs:
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 3f23533cf1490f89d4509cb48fb2f2fc.dir
+      size: 4696224
+      nfiles: 2
+  training:
+    cmd: python src/pipeline/stage_03_model_training.py
+    deps:
+    - path: artifacts/data_ingestion/chest_xray
+      hash: md5
+      md5: 5e95cbf05923c6f7a093e84fbdba9463.dir
+      size: 1236482806
+      nfiles: 5856
+    - path: artifacts/prepare_base_model
+      hash: md5
+      md5: 3f23533cf1490f89d4509cb48fb2f2fc.dir
+      size: 4696224
+      nfiles: 2
+    - path: config/config.yaml
+      hash: md5
+      md5: 159c5d89cc14313782a87ef61a93d11f
+      size: 674
+    - path: src/pipeline/stage_03_model_training.py
+      hash: md5
+      md5: 2a4f5b1a2fb5140b578b7ce11fa6ee06
+      size: 907
+    params:
+      params.yaml:
+        AUGMENTATION: true
+        PARAMS_BATCH_SIZE: 16
+        PARAMS_EPOCHS: 30
+        PARAMS_IMAGE_SIZE:
+        - 256
+        - 256
+        - 3
+    outs:
+    - path: Model/model/best_model.h5
+      hash: md5
+      md5: 3e4775802097111de4dc533149ea4886
+      size: 10589896
+    - path: artifacts/training/train_model.h5
+      hash: md5
+      md5: 26b9475e098ddf276ade1879c80cc2ef
+      size: 10589896
+  evaluation:
+    cmd: python src/pipeline/stage_04_model_evaluation.py
+    deps:
+    - path: Model/model/best_model.h5
+      hash: md5
+      md5: 3e4775802097111de4dc533149ea4886
+      size: 10589896
+    - path: artifacts/data_ingestion/chest_xray
+      hash: md5
+      md5: 5e95cbf05923c6f7a093e84fbdba9463.dir
+      size: 1236482806
+      nfiles: 5856
+    - path: config/config.yaml
+      hash: md5
+      md5: 159c5d89cc14313782a87ef61a93d11f
+      size: 674
+    - path: src/pipeline/stage_04_model_evaluation.py
+      hash: md5
+      md5: da1bc2133faf92cf5f73295992698388
+      size: 918
+    params:
+      params.yaml:
+        PARAMS_BATCH_SIZE: 16
+        PARAMS_IMAGE_SIZE:
+        - 256
+        - 256
+        - 3
+    outs:
+    - path: scores.json
+      hash: md5
+      md5: 5e471a8c30863321a9104a713f25f735
+      size: 73

@@ -1,0 +1,10 @@
+[2025-06-16 21:55:32,015] 27 root - INFO - *******************
+[2025-06-16 21:55:32,016] 28 root - INFO - >>>>>> stage Evaluation stage started <<<<<<
+[2025-06-16 21:55:32,017] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-16 21:55:32,018] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-16 21:55:32,019] 52 root - INFO - created directory at: artifacts
+[2025-06-16 21:55:41,478] 66 root - INFO - json file saved at: scores.json
+[2025-06-16 21:55:41,479] 66 root - INFO - json file saved at: scores.json
+[2025-06-16 21:55:41,479] 31 root - INFO - >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x

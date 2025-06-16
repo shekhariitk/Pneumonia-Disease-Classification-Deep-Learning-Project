@@ -1,0 +1,25 @@
+[2025-06-16 21:05:12,324] 73 root - INFO - Loading callbacks for model training...
+[2025-06-16 21:05:12,325] 27 root - INFO - *******************
+[2025-06-16 21:05:12,326] 28 root - INFO - >>>>>> stage Training started <<<<<<
+[2025-06-16 21:05:12,334] 32 root - INFO - yaml file: config\config.yaml loaded successfully
+[2025-06-16 21:05:12,339] 32 root - INFO - yaml file: params.yaml loaded successfully
+[2025-06-16 21:05:12,341] 52 root - INFO - created directory at: artifacts
+[2025-06-16 21:05:12,343] 52 root - INFO - created directory at: artifacts\training
+[2025-06-16 21:05:13,094] 35 root - INFO - Creating validation and training data generators...
+[2025-06-16 21:05:13,233] 46 root - INFO - Creating training data generator with augmentation...
+[2025-06-16 21:05:13,915] 97 root - INFO - Starting model training...
+[2025-06-16 21:05:13,916] 100 root - INFO - Steps per epoch: 326, Validation steps: 39
+[2025-06-16 21:05:13,916] 103 root - INFO - Fitting the model...
+[2025-06-16 21:05:13,916] 19 root - INFO - Creating callbacks for model training...
+[2025-06-16 21:05:13,956] 23 root - INFO - Model directory created at: Model\model
+[2025-06-16 21:05:13,958] 27 root - INFO - Model will be saved to: Model\model\best_model.h5
+[2025-06-16 21:05:13,959] 30 root - INFO - Creating EarlyStopping
+[2025-06-16 21:05:13,960] 39 root - INFO - Creating ReduceLROnPlateau
+[2025-06-16 21:05:13,961] 49 root - INFO - Creating ModelCheckpoint
+[2025-06-16 21:05:13,962] 58 root - INFO - Callbacks list created: [<keras.callbacks.EarlyStopping object at 0x000001BD7EC66620>, <keras.callbacks.ReduceLROnPlateau object at 0x000001BD7EC66770>, <keras.callbacks.ModelCheckpoint object at 0x000001BD0108FEE0>]
+[2025-06-16 21:05:13,962] 85 root - INFO - Calculating class weights for imbalanced dataset...
+[2025-06-16 21:05:13,963] 65 root - INFO - ClassWeightCalculator initialized.
+[2025-06-16 21:05:14,028] 80 root - INFO - Computed class weights: {0: 1.9448173005219984, 1: 0.6730322580645162}
+[2025-06-16 21:55:08,645] 31 root - INFO - >>>>>> stage Training completed <<<<<<
+
+x==========x

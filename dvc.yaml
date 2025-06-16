@@ -1,0 +1,55 @@
+stages:
+  data_ingestion:
+    cmd: python src/pipeline/stage_01_data_ingestion.py
+    deps:
+      - src/pipeline/stage_01_data_ingestion.py
+      - config/config.yaml
+    outs:
+      - artifacts/data_ingestion/chest_xray
+
+
+  prepare_base_model:
+    cmd: python src/pipeline/stage_02_prepare_base_model.py
+    deps:
+      - src/pipeline/stage_02_prepare_base_model.py
+      - config/config.yaml
+    params:
+      - PARAMS_IMAGE_SIZE
+      - PARAMS_INCLUDE_TOP
+      - PARAMS_CLASSES
+      - PARAMS_WEIGHTS
+      - PARAMS_LEARNING_RATE
+    outs:
+      - artifacts/prepare_base_model
+
+
+  training:
+    cmd: python src/pipeline/stage_03_model_training.py
+    deps:
+      - src/pipeline/stage_03_model_training.py
+      - config/config.yaml
+      - artifacts/data_ingestion/chest_xray
+      - artifacts/prepare_base_model
+    params:
+      - PARAMS_IMAGE_SIZE
+      - PARAMS_EPOCHS
+      - PARAMS_BATCH_SIZE
+      - AUGMENTATION
+    outs:
+      - artifacts/training/train_model.h5
+      - Model/model/best_model.h5
+
+
+  evaluation:
+    cmd: python src/pipeline/stage_04_model_evaluation.py
+    deps:
+      - src/pipeline/stage_04_model_evaluation.py
+      - config/config.yaml
+      - artifacts/data_ingestion/chest_xray
+      - Model/model/best_model.h5
+    params:
+      - PARAMS_IMAGE_SIZE
+      - PARAMS_BATCH_SIZE
+    metrics:
+    - scores.json:
+        cache: false

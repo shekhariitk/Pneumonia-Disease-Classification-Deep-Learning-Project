@@ -16,8 +16,8 @@ prepare_base_model:
 
 training:
   root_dir: artifacts/training
-  model_dir: Model
+  model_dir: Model/model
   trained_model_path: artifacts/training/train_model.h5
-  best_trained_model_path: Model/best_model.h5
+  best_trained_model_path: Model/model/best_model.h5
 
 
