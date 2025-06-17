@@ -3,3 +3,4 @@ numpy>=1.21.0,<1.24.0
 Flask
 Flask-Cors
 pyyaml
+gunicorn
