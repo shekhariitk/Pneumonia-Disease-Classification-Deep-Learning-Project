@@ -2,15 +2,21 @@ from flask import Flask, render_template, request, redirect, url_for, flash
 import numpy as np
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
+from src.utils.common import read_yaml
 from PIL import Image
 import io
+import os
 import base64
+from pathlib import Path
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key_here'
+
+base_dir = os.path.dirname(os.path.abspath(__file__))
+
+model_config = read_yaml(Path(base_dir) / 'config' / 'config.yaml')
 
 # Load model
-model = load_model(r'Model\model\best_model.h5')
+model = load_model(model_config['training']['best_trained_model_path'])
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -77,4 +83,4 @@ def about():
     return render_template('about.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5000, host='0.0.0.0')

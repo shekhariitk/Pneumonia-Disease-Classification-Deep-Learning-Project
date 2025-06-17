@@ -12,3 +12,6 @@ artifacts/
 
 # ignore mlflow tracking directory
 mlruns
+
+# ignore logs
+logs/

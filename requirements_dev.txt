@@ -1,0 +1,5 @@
+tensorflow==2.12.0
+numpy>=1.21.0,<1.24.0
+Flask
+Flask-Cors
+pyyaml
